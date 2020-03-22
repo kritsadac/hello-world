@@ -1,6 +1,6 @@
 FROM debian:8
 
-MAINTAINER MiJacK <mijack@mijack.net>
+MAINTAINER kritsadadocker <reonaiduzz@gmail.com>
 RUN apt-get update
 RUN apt-get install nginx -y
 ADD index.html /var/www/html/index.html
