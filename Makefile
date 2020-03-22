@@ -3,11 +3,11 @@ all:	create_version build tag publish
 create_version:
 	echo ${GIT_COMMIT} > app_version
 build:
-	docker build . -t nginx-helloworld:${GIT_COMMIT}
+	docker build . -t hello-world:${GIT_COMMIT}
 tag:
-	docker tag nginx-helloworld:${GIT_COMMIT} kritsadadocker/nginx-helloworld:${GIT_COMMIT}
-	docker tag nginx-helloworld:${GIT_COMMIT} nginx-helloworld:latest
-	docker tag nginx-helloworld:latest kritsadadocker/nginx-helloworld:latest
+	docker tag hello-world:${GIT_COMMIT} kritsadadocker/nginx-helloworld:${GIT_COMMIT}
+	docker tag hello-world:${GIT_COMMIT} nginx-helloworld:latest
+	docker tag hello-world:latest kritsadadocker/nginx-helloworld:latest
 login:
 	docker login
 publish:
